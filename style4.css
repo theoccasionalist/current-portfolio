@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Jura');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-image: url("images/space.png");
+    background-size: 100% 100%;
+    width: 1590px;
+}
+
+header {
+    font-family: 'Indie Flower', cursive;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    background-image: url("images/feathers.png");
+    background-color: rgba(15, 145, 150, 1);/*rgba(204, 155, 70, 1);*/
+    max-width: 25em;
+    max-height: 7em; 
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    border-radius: 10px 10px 10px 0;
+    overflow: visible;
+}
+#about {
+    background-image: url("images/feathers.png");
+    background-color: rgba(15, 145, 150, 1);
+    background-size: cover;
+    border-radius: 0 10px 10px 10px;
+    width: 5em;
+    height: 30em;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    z-index: 0;
+}
+
+#open {
+    position: absolute;
+    left: 1.3em;
+    z-index: -1;
+    transform-origin: 50% 0;
+    animation: swing 3.5s ease-in-out forwards infinite;
+}
+
+@keyframes swing{
+    0%{transform: rotate(10deg);}
+    50%{transform: rotate(-5deg)}
+    100%{transform: rotate(10deg);}
+}
+
+#logo {
+    border-radius: 50%;
+    left: 50px;
+    width: 10em;
+    height: 10em;
+    box-shadow: -7px 5px rgba(30,25,25, .3);
+    overflow: visible;
+    z-index: initial;
+}
+
+
+#overFlowDiv {
+    position:relative;
+}
+
+#blurb {
+    position: absolute;
+    background-image: url("images/feathers.png");
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    width: 1350px;
+    height: 450px;
+    top: 100px;
+    left: 150px;
+    z-index: -2;
+   /* display: grid;
+    grid-template-areas: 5em 8em 0 0;*/
+    text-align: center;
+    background-color: #ff99bb;
+    opacity: .9;
+    font-family: 'Jura', sans-serif;
+    font-size: 40px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.languages {
+    font-size: 30px;
+}
+
+
+button {
+    background-image: url("images/feathers.png");
+    border: none;
+    height: 70px;
+    width: 260px;
+    left: -202px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    transition: 0.3s;
+    border-radius: 0 10px 10px 0;
+    font-family: 'Jura', sans-serif;
+}
+
+button:hover, button:focus {
+    background-color: #2980B9;
+}
+
+#navButton1{
+    position:absolute;
+    top:4em;
+    background-color: red;
+   
+}
+
+#navButton2{
+    position:absolute;
+    top: 7em;
+    background-color: blue;
+}
+
+#navButton3{
+    position:absolute;
+    top: 10em;
+    background-color: green;
+    border-radius: 0 10px 10px 0;
+}
+
+#navButton4{
+    position:absolute;
+    top:13em;
+    background-color: #FF8C00;
+}
+
+#space-dance {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 80px;
+    bottom: -3px;
+    z-index: -1;
+}
+
+/*#blurb div {
+    position: absolute;
+    background-image: url("images/feathers.png"); 
+    height: 250px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: green;
+
+}*/
+
+#fusa {
+    position: absolute;
+    left: 300px;
+    bottom: 30px;
+    height: 200px;
+    width: 150px;
+    border-radius: 25px;
+    animation-name: fusa;
+}
+
+#phil {
+    position: absolute;
+    right: 300px;
+    bottom: 30px;
+    height: 200px;
+    width: 150px;
+    border-radius: 25px;
+}
+
+#cat-sleeping {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    right: 40px;
+    bottom: -45px;
+    z-index: -1;
+}
+
+#right-frame-relative{
+    position:relative;
+}
+
+#right-frame-absolute{
+    position: absolute;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    display:grid;
+    grid-template-columns: 2em;
+    background-image: url("images/feathers.png");
+    background-color: rgba(15, 145, 150, 1);
+    border-radius: 10px 10px 0 0;
+    height: 8em;
+    bottom: 4em;
+    width: 3.5em;
+    right: 50px;
+    z-index: -3;
+}
+
+#right-frame-relative2{
+    position:relative;
+}
+
+#right-frame-absolute2{
+    position: absolute;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    display:grid;
+    grid-template-rows: 4em;
+    background-image: url("images/feathers.png");
+    background-color: rgba(15, 145, 150, 1);
+    border-radius: 10px 0 10px 10px;
+    height: 3.5em;
+    bottom: .5em;
+    width:15em;
+    right: 50px;
+    z-index: -3;
+}
+
+#top-frame-relative{
+    position:relative;
+}
+
+#top-frame-absolute{
+    position: absolute;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    display:grid;
+    grid-template-rows: 4em;
+    background-image: url("images/feathers.png");
+    background-color: rgba(15, 145, 150, 1);
+    border-radius: 10px 10px 0 10px;
+    text-align: center;
+    font-family: font-family: 'Jura', sans-serif;
+    font-size: 20px;
+    color: white;
+    height: 3.5em;
+    top: -40px;
+    width:12em;
+    right: 50px;
+    z-index: 1;
+}
+
+#top-frame-relative2{
+    position:relative;
+}
+
+#top-frame-absolute2{
+    position: absolute;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    display:grid;
+    grid-template-columns: 2em;
+    background-image: url("images/feathers.png");
+    background-color: rgba(15, 145, 150, 1);
+    border-radius: 0px 0px 10px 10px;
+    height: 100px;
+    bottom: -8.1em;
+    width: 3.5em;
+    right: 50px;
+    z-index: 1;
+}
+
+#github {
+    position: absolute;
+    top: 2em;
+    left: .75em;
+}
+
+

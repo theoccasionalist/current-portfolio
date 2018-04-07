@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Jura');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-image: url("images/space.png");
+    background-size: 100% 100%;
+    width: 1590px;
+}
+
+header {
+    font-family: 'Indie Flower', cursive;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    background-image: url("images/feathers.png");
+    background-color: rgba(15, 145, 150, 1);/*rgba(204, 155, 70, 1);*/
+    max-width: 25em;
+    max-height: 7em; 
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    border-radius: 10px 10px 10px 0;
+    overflow: visible;
+}
+#about {
+    background-image: url("images/feathers.png");
+    background-color: rgba(15, 145, 150, 1);
+    background-size: cover;
+    border-radius: 0 10px 10px 10px;
+    width: 5em;
+    height: 30em;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+}
+
+#open {
+    position: absolute;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    left: 1.3em;
+    z-index: -1;
+    transform-origin: 50% 0;
+    animation: swing 3.5s ease-in-out forwards infinite;
+}
+
+@keyframes swing{
+    0%{transform: rotate(10deg);}
+    50%{transform: rotate(-5deg)}
+    100%{transform: rotate(10deg);}
+}
+
+#logo {
+    border-radius: 50%;
+    left: 50px;
+    width: 10em;
+    height: 10em;
+    box-shadow: -7px 5px rgba(30,25,25, .3);
+    overflow: visible;
+    z-index: initial;
+}
+
+#logo:hover, #logo:focus {
+    animation-duration: 10s;
+    animation-name: leftCircle;
+}
+
+@keyframes leftCircle {
+    0%{transform:  rotate(360deg);}
+    100%{transform: rotate(0deg);}
+}
+
+
+#overFlowDiv {
+    position:relative;
+}
+
+#blurb {
+    position: absolute;
+    background-image: url("images/feathers.png");
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    width: 1350px;
+    height: 450px;
+    top: 100px;
+    left: 150px;
+    z-index: -2;
+   /* display: grid;
+    grid-template-areas: 5em 8em 0 0;*/
+    text-align: center;
+    background-color: #ff99bb;
+    opacity: .9;
+    font-family: 'Jura', sans-serif;
+    font-size: 40px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#about button {
+    background-image: url("images/feathers.png");
+    border: none;
+    height: 70px;
+    width: 260px;
+    left: -210px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    transition: 0.3s;
+    border-radius: 10px;
+    font-family: 'Jura', sans-serif;
+}
+
+#navButton1{
+    position:absolute;
+    top:4em;
+    background-color: red;
+   
+}
+
+#navButton2{
+    position:absolute;
+    top: 7em;
+    background-color: blue;
+}
+
+#navButton3{
+    position:absolute;
+    top: 10em;
+    background-color: green;
+}
+
+#navButton4{
+    position:absolute;
+    top:13em;
+    background-color: #FF8C00;
+}
+
+.pics{
+    margin-left: 100px;
+    margin-right: 100px;
+    display:grid;
+    grid-template-areas: 100px 100px 100px 100px;
+    grid-gap: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pics img {
+    padding: 25px;
+    width: 100px;
+    height: 100px;
+}
+
+.pics div {
+    background-image: url("images/feathers.png"); 
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #FF8C00;
+    z-index: 2;
+    justify-content: space-between;
+    animation-duration: 13s;
+    animation-name: turn; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.pics div:nth-of-type(2) {
+    background-color: green;
+    animation-duration: 12s;
+    animation-name: turn2;
+    flex-direction: column-reverse;
+}
+
+.pics div:nth-of-type(3) {
+    background-color: blue;
+    animation-duration: 17s;
+    flex-direction: column-reverse;
+}
+
+.pics div:nth-of-type(4) {
+    background-color: red;
+    animation-duration: 16s;
+    animation-name: turn2;
+}   
+
+@keyframes turn {
+    0%{transform: translateX(0px) translateY(-40px) rotate(0deg) scaleX(1) scaleY(1);}
+    50%{transform: translateX(50px) translateY(255px) rotate(180deg) scaleX(-1) scaleY(1.5);}
+    100%{transform: translateX(0px) translateY(-40px) rotate(360deg) scaleX(1) scaleY(1);}
+}
+
+@keyframes turn2 {
+    0%{transform: translateX(0px) translateY(255px) rotate(0deg) scaleX(-1) scaleY(1.5);}
+    50%{transform: translateX(-50px) translateY(-40px) rotate(180deg) scaleX(1) scaleY(1);}
+    100%{transform: translateX(0px) translateY(255px) rotate(360deg) scaleX(-1) scaleY(1.5);}
+}
+
+.modal {
+    position: fixed;
+    width: 1350px;
+    height: 450px;
+    top: 100px;
+    left: 150px;
+    background-color: black;
+    border-radius: 10px;
+    opacity: .9;
+    z-index: 3;
+    visibility: hidden;
+}
+
+.modal p{
+    font-size: 20px;
+    text-align: left;
+    color: white;
+    visibility: hidden;
+}
+
+#close-button-relative{
+    position: relative;
+}
+
+#close-button{
+    background-image: url("images/feathers.png");
+    background-color: #ff99bb;
+    border: none;
+    height: 70px;
+    width: 260px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    border-radius: 10px;
+    font-family: 'Jura', sans-serif;
+    position: absolute;
+    bottom: 225px;
+    right: 50px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+#close-button:hover, #close-button:focus {
+    background-color: #ff70bb; 
+}
+
+#lm-rel{
+    position: relative;
+}
+
+#learn-more {
+    position: absolute;
+    background-image: url("images/feathers.png");
+    border-radius: 10px;
+    background-color: orange;
+    justify-content: center;
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    left: 600px; 
+    font-family: 'Jura', sans-serif;
+    font-size: 20px;
+}
+
+#modal-box-links{
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px;
+    display:flex;
+    justify-content: space-around;
+    /*background-color: red;*/
+}
+
+#modal-box-links button {
+    position: absolute;
+    background-image: url("images/feathers.png");
+    border: none;
+    height: 70px;
+    width: 260px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    border-radius: 10px;
+    font-family: 'Jura', sans-serif;
+    z-index: 3;
+    background-color: red;
+    cursor: pointer;
+}
+
+#modal-box-links button:nth-of-type(2) {
+    background-color: blue;
+}
+
+#modal-box-links button:nth-of-type(3) {
+    background-color: green;
+}
+
+#modal-box-links button:nth-of-type(4) {
+    background-color: #FF8C00;
+}
+
+#modal{
+    position: relative;
+}
+
+#pantry-content, #store-content, #reviews-content, #virtual-pet-content {
+    position: absolute;
+    top: 50px;
+    margin-left: 100px;
+    margin-right: 400px;
+}
+
+#pantry-button{
+    bottom: 150px;
+    left: 220px;
+}
+
+#store-button{
+    bottom: 150px;
+    left: 520px;
+}
+
+#reviews-button{
+    bottom: 150px;
+    left: 880px;
+}
+
+#virtual-pet-button{
+    bottom: 150px;
+    left: 1180px;
+}
+
+#cat-play{
+    position: absolute;
+    height: 200px;
+    width: 140px;
+    bottom: 20px;
+    left: 140px;
+    /*transform-origin: 50% 0;*/
+}
+
+#right-frame-relative{
+    position:relative;
+}
+
+#right-frame-absolute{
+    position: absolute;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    display:grid;
+    grid-template-columns: 2em;
+    background-image: url("images/feathers.png");
+    background-color: rgba(15, 145, 150, 1);
+    border-radius: 10px 10px 0px 0px;
+    height: 8em;
+    bottom: 4em;
+    width: 3.5em;
+    right: 50px;
+    z-index: -3;
+}
+
+#right-frame-relative2{
+    position:relative;
+}
+
+#right-frame-absolute2{
+    position: absolute;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    display:grid;
+    grid-template-rows: 4em;
+    background-image: url("images/feathers.png");
+    background-color: rgba(15, 145, 150, 1);
+    border-radius: 10px 0px 10px 10px;
+    height: 3.5em;
+    bottom: .5em;
+    width:15em;
+    right: 50px;
+    z-index: -3;
+}
+
+#top-frame-relative{
+    position:relative;
+}
+
+#top-frame-absolute{
+    position: absolute;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    display:grid;
+    grid-template-rows: 4em;
+    background-image: url("images/feathers.png");
+    background-color: rgba(15, 145, 150, 1);
+    border-radius: 10px 10px 0 10px;
+    text-align: center;
+    font-family: font-family: 'Jura', sans-serif;
+    font-size: 20px;
+    color: white;
+    height: 3.5em;
+    top: -40px;
+    width:12em;
+    right: 50px;
+    z-index: 1;
+}
+
+#top-frame-relative2{
+    position:relative;
+}
+
+#top-frame-absolute2{
+    position: absolute;
+    box-shadow: -7px 7px rgba(30,25,25, .3);
+    display:grid;
+    grid-template-columns: 2em;
+    background-image: url("images/feathers.png");
+    background-color: rgba(15, 145, 150, 1);
+    border-radius: 0px 0px 10px 10px;
+    height: 100px;
+    bottom: -8.1em;
+    width: 3.5em;
+    right: 50px;
+    z-index: 1;
+}
+
+#github {
+    position: absolute;
+    top: 2em;
+    left: .75em;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#github:hover, #github:focus {
+    animation-duration: 10s;
+    animation-name: rightCircle;
+}
+
+@keyframes rightCircle {
+    0%{transform: scale(1) rotate(0deg);}
+    100%{transform: scale(1.5) rotate(360deg);}
+}
+
+
+
+ 
+
