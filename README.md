@@ -1,5 +1,5 @@
 # Personal Portfolio
-## <a href="theoccasionalist.net"> Click here to see my personal portfolio in action!</a>
+## <a href="http://www.theoccasionalist.net"> Click here to see my personal portfolio in action!</a>
 ### Tech Specs:
 <ul>
   <li>HTML5</li>
