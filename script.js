@@ -32,6 +32,7 @@ navButton3.addEventListener('mouseleave', function() {
 
 navButton4.addEventListener('mouseenter', function() {
 	navButton4.style.left = "-60px";
+	navButton4.style.cursor = "pointer";
 })
 
 navButton4.addEventListener('mouseleave', function() {
@@ -54,7 +55,11 @@ const virtualPetContent = document.querySelector("#virtual-pet-content");
 function projectButtonsPush() {
 	
 	modal.style.visibility = "visible";
+	modal.style.transition= "all 3s 0s";
+	modal.style.transform = "translateX(-1450px)";
 	closeButton.style.visibility = "visible";
+	closeButton.style.transition= "all 2s 0s";
+	closeButton.style.transform = "translateY(350px)";
 	pantryButton.style.visibility = "hidden";
 	storeButton.style.visibility = "hidden";
 	reviewsButton.style.visibility = "hidden";
@@ -83,8 +88,12 @@ virtualPetButton.addEventListener('click', function() {
 
 const closeButton = document.querySelector("#close-button");
 closeButton.addEventListener('click', function() {
-	closeButton.style.visibility = "hidden";
+	modal.style.transition= "all 2s 0s";
+	modal.style.transform = "translateX(1450px)";
 	modal.style.visibility = "hidden";
+	closeButton.style.transition= "all 1s 0s";
+	closeButton.style.transform = "translateY(-350px)";
+	closeButton.style.visibility = "hidden";
 	pantryButton.style.visibility = "visible";
 	storeButton.style.visibility = "visible";
 	reviewsButton.style.visibility = "visible";

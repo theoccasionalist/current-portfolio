@@ -201,11 +201,12 @@ header {
     width: 1350px;
     height: 450px;
     top: 100px;
-    left: 150px;
+    right: -1350px;
     background-color: black;
     border-radius: 10px;
     opacity: .9;
     z-index: 3;
+    overflow: hidden;
     visibility: hidden;
 }
 
@@ -218,6 +219,7 @@ header {
 
 #close-button-relative{
     position: relative;
+    
 }
 
 #close-button{
@@ -234,9 +236,11 @@ header {
     border-radius: 10px;
     font-family: 'Jura', sans-serif;
     position: absolute;
-    bottom: 225px;
+    /*bottom: 225px;*/
+    top: -650px;
     right: 50px;
     cursor: pointer;
+    overflow: hidden;
     visibility: hidden;
 }
 
@@ -310,6 +314,56 @@ header {
     top: 50px;
     margin-left: 100px;
     margin-right: 400px;
+}
+
+#broad-street-pic {
+    position: absolute;
+    border-radius: 50%;
+    top: 200px;
+    left: 500px;
+    width: 150px;
+    height: 150px;
+}
+
+.store-pics {
+    position: absolute;
+    border-radius: 10px;
+    top: 125px;
+    width: 400px;
+    height: 200px;
+}
+
+#store-front-pic {
+    left:10px;
+}
+
+#item-page-pic {
+    left:460px;
+}
+
+.reviews-pics {
+    position: absolute;
+    border-radius: 10px;
+    top: 125px;
+    width: 125px;
+    height: 200px;
+}
+
+#review-categoris-pic {
+    left: 20px;
+}
+
+#reviews-by-category-pic {
+    left: 185px;
+}
+
+#single-review-pic {
+    left: 350px;
+}
+
+#virtual-pets-pic {
+    width: 507px;
+    height: 208px;
 }
 
 #pantry-button{

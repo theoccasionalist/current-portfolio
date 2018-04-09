@@ -95,6 +95,39 @@ header {
     border-radius: 10px 10px 10px 10px;
 }
 
+
+
+#blurb div {
+    position:absolute;
+    background-image:url("images/feathers.png"); 
+    left:50px;
+    top:100px;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: green;
+    animation-duration: 20s;
+    animation-name: pivot; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes pivot {
+    0%{transform: scaleX(-1) translateX(0px) translateY(0px)  ;}
+    25%{transform: scaleX(-1) translateX(-10px) translateY(-20px) ;}
+    50%{transform: scaleX(-1) translateX(20px) translateY(-40px) ;}
+    75%{transform: scaleX(-1) translateX(-10px) translateY(-20px) ;}
+    100%{transform: scaleX(-1) translateX(0px) translateY(0px);}
+}
+
+
+#grad {
+    padding: 25px;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
 .ed-type {
     font-size: 40px;
 }
@@ -145,23 +178,6 @@ button {
     background-color: #FF8C00;
 }
 
-#blurb div {
-    position:absolute;
-    background-image:url("images/feathers.png"); 
-    right:50px;
-    top:100px;
-    height: 250px;
-    width: 250px;
-    border-radius: 10px;
-    background-color: green;
-}
-
-#grad {
-    padding: 25px;
-    height: 200px;
-    width: 200px;
-    border-radius: 10px;
-}
 
 
 
@@ -175,7 +191,7 @@ button {
     position: absolute;
     overflow: hidden;
     z-index: -3;
-    animation-duration: 15s;
+    animation-duration: 20s;
     animation-name: float; 
     animation-iteration-count: infinite;
     animation-timing-function: linear;

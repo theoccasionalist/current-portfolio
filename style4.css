@@ -60,6 +60,17 @@ header {
     z-index: initial;
 }
 
+#logo:hover, #logo:focus {
+    animation-duration: 10s;
+    animation-name: leftCircle;
+}
+
+@keyframes leftCircle {
+    0%{transform:  rotate(360deg);}
+    100%{transform: rotate(0deg);}
+}
+
+
 
 #overFlowDiv {
     position:relative;
@@ -74,8 +85,6 @@ header {
     top: 100px;
     left: 150px;
     z-index: -2;
-   /* display: grid;
-    grid-template-areas: 5em 8em 0 0;*/
     text-align: center;
     background-color: #ff99bb;
     opacity: .9;
@@ -84,17 +93,84 @@ header {
     border-radius: 10px 10px 10px 10px;
 }
 
+#blurb div {
+    position: absolute;
+    background-image: url("images/feathers.png");
+    background-color: blue;
+    bottom: 20px;
+    width: 225px;
+    height: 225px;
+    border-radius: 200px;s
+}
+
+#blurb div:nth-of-type(1) {
+    left: 30px;
+    padding: 25px;
+    z-index: -1;
+    background-color: red;
+    animation-name: fusa;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+}
+
+#blurb div:nth-of-type(2) {
+    right: 30px;
+    padding: 25px;
+    z-index: -1;
+    background-color: blue;
+    animation-name: phil;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+}
+
+#fusa {
+    position: absolute;
+    padding: 5px;
+    left: 30px;
+    bottom: 30px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+@keyframes fusa {
+    0% {transform: translateX(0px) translateY(0px) rotate(0deg);}
+    25%{transform: translateX(200px) translateY(-75px) rotate(180deg);}
+    50%{transform: translateX(350px) translateY(-130px) rotate(90deg);}
+    75%{transform: translateX(200px) translateY(-10px) rotate(45deg);}
+    100%{transform: translateX(0px) translateY(0px) rotate(0deg);}
+}
+
+#phil {
+    position: absolute;
+    padding: 5px;
+    right: 30px;
+    bottom: 30px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+@keyframes phil {
+    0% {transform: translateX(0px) translateY(0px) rotate(0deg);}
+    25%{transform: translateX(-200px) translateY(-50px) rotate(45deg);}
+    50%{transform: translateX(-400px) translateY(-100px)rotate(180deg);}
+    75%{transform: translateX(-100px) translateY(-20px) rotate(90deg);}
+    100%{transform: translateX(0px) translateY(0px) rotate(0deg);}
+}
+
 .languages {
     font-size: 30px;
 }
-
 
 button {
     background-image: url("images/feathers.png");
     border: none;
     height: 70px;
     width: 260px;
-    left: -202px;
+    left: -210px;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -154,24 +230,6 @@ button:hover, button:focus {
 
 }*/
 
-#fusa {
-    position: absolute;
-    left: 300px;
-    bottom: 30px;
-    height: 200px;
-    width: 150px;
-    border-radius: 25px;
-    animation-name: fusa;
-}
-
-#phil {
-    position: absolute;
-    right: 300px;
-    bottom: 30px;
-    height: 200px;
-    width: 150px;
-    border-radius: 25px;
-}
 
 #cat-sleeping {
     position: absolute;
@@ -266,6 +324,18 @@ button:hover, button:focus {
     position: absolute;
     top: 2em;
     left: .75em;
+    background-color: red;
+    border-radius: 50%;
+
 }
 
+#github:hover, #github:focus {
+    animation-duration: 10s;
+    animation-name: rightCircle;
+}
+
+@keyframes rightCircle {
+    0%{transform: scale(1) rotate(0deg);}
+    100%{transform: scale(1.5) rotate(360deg);}
+}
 
