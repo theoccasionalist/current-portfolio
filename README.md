@@ -8,3 +8,6 @@
   <li>CSS3</li>
   <li>JavaScript</li>
 </ul> 
+
+![portfolio](https://user-images.githubusercontent.com/28411165/38963539-776eef80-4340-11e8-8ee6-aef39fde7acf.jpg)
+
