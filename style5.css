@@ -80,25 +80,133 @@ header {
     background-color: #ff99bb;
     opacity: .9;
     font-size: 30px;
-    text-align: left;
+    text-align: center;
     font-family: 'Jura', sans-serif;
     border-radius: 10px 10px 10px 10px;
     overflow: hidden;
 }
 
-#blurb div {
-    padding: 15px;
+
+#scroll {
+    position: absolute;
+    width: 18em;
+    height: 50em;
+    bottom: 0;
+    left: 150px;
+    right: 200px;
+    /*margin-left: -9em;*/
+    font-size: 200%;
+    font-weight: bold;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    transform: perspective(300px) rotateX(25deg);
 }
 
-#scroll-1 {
-    animation-name: first;
-    animation-duration: 30s;
-    animation-timing-function: linear;
+.description li {
+    text-align: left;
+    list-style-type: none;
+    left: 200px;
+    right: 250px;
+    
+}
+
+#scroll:after {
+    position: absolute;
+   /* content: ' ';*/
+/*    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 60%;*/
+    pointer-events: none;
+}
+
+#scroll-content {
+    position: absolute;
+    top: 100%;
+    animation-name: scroll; 
+    animation-duration: 150s; 
     animation-iteration-count: infinite;
 }
-@keyframes first {
-    0%{transform: translateY(400px);}
-    100%{transform: translateY(-600px);}
+
+#scroll-content2 {
+    position: absolute;
+    top: 100%;
+    animation-name: scroll2; 
+    animation-duration: 150s; 
+    animation-iteration-count: infinite;
+    animation-delay: 50s;
+}
+
+#scroll-content3 {
+    position: absolute;
+    top: 100%;
+    animation-name: scroll3; 
+    animation-duration: 150s; 
+    animation-iteration-count: infinite;
+    animation-delay: 100s;
+}
+
+@keyframes scroll {
+    0% { top: 100%; }
+    100% { top: -200%; }
+}
+
+@keyframes scroll2 {
+    0% { top: 100%; }
+    100% { top: -200%; }
+}
+
+@keyframes scroll3 {
+    0% { top: 100%; }
+    100% { top: -200%; }
+}
+
+.planet {
+    animation-name: planet-spin;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+
+@keyframes planet-spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+#spin-star {
+    position: absolute;
+    left: 50px;
+    z-index: -1;
+    animation-name: spin-star;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+}
+
+@keyframes spin-star {
+    0%{transform: scale(.6) translateX(-25px) translateY(650px) rotate(0deg);}
+    25%{transform: scale(.7) translateX(-40px) translateY(150px) rotate(90deg);}
+    50%{transform: scale(.8) translateX(5px) translateY(-150px) rotate(180deg);}
+    75%{transform: scale(.7) translateX(40px) translateY(150px) rotate(270deg);}
+    100%{transform: scale(.6) translateX(-25px) translateY(650px) rotate(360deg);}
+}
+
+#spin-star2 {
+    position: absolute;
+    right: 50px;
+    z-index: -1;
+    animation-name: spin-star2;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+}
+
+@keyframes spin-star2 {
+    0%{transform: scale(.6) translateX(-25px) translateY(-100px) rotate(0deg);}
+    25%{transform: scale(.7) translateX(-40px) translateY(300px) rotate(90deg);}
+    50%{transform: scale(.8) translateX(5px) translateY(475px) rotate(180deg);}
+    75%{transform: scale(.7) translateX(40px) translateY(300px) rotate(270deg);}
+    100%{transform: scale(.6) translateX(-25px) translateY(-100px) rotate(360deg);}
 }
 
 button {
